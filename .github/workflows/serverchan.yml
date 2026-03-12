@@ -1,14 +1,11 @@
-name: ServerChan-Notify
-on:
-push:
-branches: [ main ]
+name: ServerChan Notification
+on: [push]
 jobs:
-wechat-notify:
-runs-on: ubuntu-latest
-steps:
-- name: Send WeChat Message
-uses: niltok/serverchan-action@v1
-with:
-sckey: ${{ secrets.SCKEY }}
-text: "仓库更新提醒"
-desp: "您的serverchan-test仓库有新推送"
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send WeChat Notification
+        uses: fifsky/actions-serverchan@master
+        with:
+          sckey: ${{ secrets.SCKEY }}
+          text: "您的serverchan-test仓库有新推送"
