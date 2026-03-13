@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send WeChat Notification
-        uses: zidingyi007/actions-serverchan@master
+        uses: s00d/actions-serverchan@master
         with:
           sckey: ${{ secrets.SCKEY }}
           text: "您的serverchan-test仓库有新推送"
