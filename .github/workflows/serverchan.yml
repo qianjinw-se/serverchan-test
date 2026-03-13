@@ -4,5 +4,5 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Send WeChat Notification
-      run: curl "https://sc.ftqq.com/${{ secrets.SCKEY }}.send?text=GitHub仓库更新提醒"
+    - name: Send WeChat Notification
+    run: curl "https://sc.ftqq.com/${{ secrets.SCKEY }}.send?text=GitHub仓库更新提醒"
